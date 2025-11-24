@@ -46,11 +46,8 @@ print(tokens)
 # Your code here:
 # -----------------------------------------------
 def tokenize(string: str) -> list:
-    tokens = [word.strip('.,!?;:"\'-').lower()
-              for word in string.split()
-              if word.strip('.,!?;:"\'-')]
-
-print(tokenize(text))
+   tokens = [word.strip('.,!?;:"\'-') for word in string.split()]
+   return sorted(set(word.lower() for word in tokens))
 
 # -----------------------------------------------
 
